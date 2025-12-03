@@ -11,6 +11,7 @@
     button { padding: 10px 20px; font-size: 18px; border-radius: 10px; background:#d10064; color:white; border:none; cursor:pointer; }
     button:hover { background:#a0004e; }
     #message { display:none; margin-top: 25px; font-size: 22px; color:#333; }
+    #surpriseImage { display:none; margin-top: 20px; max-width: 80%; border-radius: 15px; }
   </style>
 </head>
 <body>
@@ -26,6 +27,9 @@
       Sei la persona più speciale della mia vita ❤️<br>
       
     </div>
+
+    <!-- Qui comparirà l'immagine -->
+    <img id="surpriseImage" src="foto_coppia.jpg" alt="Sorpresa ❤️">
   </div>
 
   <script>
@@ -35,6 +39,7 @@
 
       if (input === correctCode) {
         document.getElementById("message").style.display = "block";
+        document.getElementById("surpriseImage").style.display = "block"; // Mostra l'immagine
       } else {
         alert("Codice sbagliato 😢");
       }
