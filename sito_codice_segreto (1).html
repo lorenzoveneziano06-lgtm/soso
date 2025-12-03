@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Codice Segreto</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; padding-top: 60px; background: #fce7ef; }
+    h2 { color: #d10064; }
+    #box { background: white; display: inline-block; padding: 30px; border-radius: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.15); }
+    input { padding: 10px; font-size: 18px; border-radius: 10px; border: 1px solid #bbb; }
+    button { padding: 10px 20px; font-size: 18px; border-radius: 10px; background:#d10064; color:white; border:none; cursor:pointer; }
+    button:hover { background:#a0004e; }
+    #message { display:none; margin-top: 25px; font-size: 22px; color:#333; }
+  </style>
+</head>
+<body>
+
+  <div id="box">
+    <h2>Inserisci il codice segreto 💗</h2>
+    <input id="codeInput" type="password" placeholder="Codice..." />
+    <br><br>
+    <button onclick="checkCode()">Invia</button>
+    
+    <div id="message">
+      🎉 <b>Sorpresa!</b><br><br>
+      Sei la persona più speciale della mia vita ❤️<br>
+      (Puoi personalizzare questo messaggio modificando il file!)
+    </div>
+  </div>
+
+  <script>
+    function checkCode() {
+      const correctCode = "AMORE2025"; // <-- CAMBIA QUI IL CODICE SEGRETO
+      const input = document.getElementById("codeInput").value;
+
+      if (input === correctCode) {
+        document.getElementById("message").style.display = "block";
+      } else {
+        alert("Codice sbagliato 😢");
+      }
+    }
+  </script>
+
+</body>
+</html>
