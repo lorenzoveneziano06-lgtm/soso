@@ -12,6 +12,15 @@
     button:hover { background:#a0004e; }
     #message { display:none; margin-top: 25px; font-size: 22px; color:#333; }
     #surpriseImage { display:none; margin-top: 20px; max-width: 80%; border-radius: 15px; }
+
+    /* Link nascosto finché non appare la sorpresa */
+    #surpriseLink { 
+      display:none; 
+      margin-top: 20px; 
+      font-size: 20px; 
+      color: #d10064;
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -24,12 +33,14 @@
     
     <div id="message">
       🎉 <b>Sorpresa!</b><br><br>
-      Sei la persona più speciale della mia vita ❤️<br>
-      
+      Tanti auguri amore ❤️<br>
     </div>
 
-    <!-- Qui comparirà l'immagine -->
+    <!-- Immagine -->
     <img id="surpriseImage" src="foto_coppia.jpg" alt="Sorpresa ❤️">
+
+    <!-- 🔗 Link sotto la foto -->
+    <a id="surpriseLink" href="https://www.youtube.com/watch?v=iOT_zuDHvVk" target="_blank">Aspetta...devo dirti una cosa💕</a>
   </div>
 
   <script>
@@ -39,7 +50,8 @@
 
       if (input === correctCode) {
         document.getElementById("message").style.display = "block";
-        document.getElementById("surpriseImage").style.display = "block"; // Mostra l'immagine
+        document.getElementById("surpriseImage").style.display = "block";
+        document.getElementById("surpriseLink").style.display = "block"; // MOSTRA IL LINK
       } else {
         alert("Codice sbagliato 😢");
       }
